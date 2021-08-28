@@ -143,7 +143,35 @@ nav .active{
 
     .navbar-links.active {
         display: flex;
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #F19674;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        color: aliceblue;
     }
+
+    
+    nav a::after{
+        background-color: aliceblue;
+    }
+
+    nav a:hover { 
+        color: aliceblue;
+    }
+
+    nav .active{
+        background-color: aliceblue;
+    }
+
+    nav a { 
+        color: aliceblue;
+    }
+
+
 
     .navbar-links.active p{
         display: none;
