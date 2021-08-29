@@ -75,3 +75,4 @@ let bubble = document.createElement("li");
     * Added active section where the navbar highlights the section on viewport
 * 0.1
     * Initial Release
+

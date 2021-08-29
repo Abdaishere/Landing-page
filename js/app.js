@@ -31,6 +31,7 @@ function buildSection(heading, description, i) {
   desc.textContent = description;
   parent.appendChild(desc);
 
+  // Active Section is in Viewport ?
   window.addEventListener("scroll", (event) => {
     let nav = document.getElementById(section.id * -1);
     console.log(section);
@@ -42,6 +43,7 @@ function buildSection(heading, description, i) {
   section.appendChild(parent);
   document.getElementById("sections").appendChild(section);
 
+  //Go to section
   a.addEventListener("click", function () {
     document.getElementById(brevid).classList.remove("active");
     this.classList.add("active");
