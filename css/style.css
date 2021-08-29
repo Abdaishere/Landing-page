@@ -23,9 +23,9 @@ header hr {
 }
 
 .shadow {
-  -moz-box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
-  -webkit-box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
-  box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+  -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   color: aliceblue;
 }
 
@@ -38,7 +38,7 @@ header::after {
 nav {
   float: left;
   text-align: center;
-  text-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 nav ul {
   margin: 0;
@@ -61,6 +61,10 @@ nav button {
   margin: 0 0;
   padding: 18px;
   background-color: #f19674;
+  -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  color: aliceblue;
 }
 .container {
   width: 80%;
@@ -87,7 +91,7 @@ nav a::after {
   position: absolute;
   top: 45px;
   width: 0%;
-  box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   transition: all ease-in-out 300ms;
 }
 
@@ -121,6 +125,11 @@ nav .active {
 }
 
 @media (max-width: 680px) {
+  ul button {
+    -moz-box-shadow: 0 0px 0px;
+    -webkit-box-shadow: 0 0px 0px;
+    box-shadow: 0 0px 0px;
+  }
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -166,7 +175,7 @@ nav .active {
   }
 
   nav .active {
-    background-color: aliceblue;
+    color: aliceblue;
   }
 
   nav a {
@@ -197,31 +206,10 @@ nav .active {
   animation: square 100s infinite;
   transition-timing-function: linear;
   border-radius: 50%;
-  -moz-box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
-  -webkit-box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
-  box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+  -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
-
-/* .bubbles li:nth-child(1){
-    width: 40px;
-    height: 40px;
-    left: 20%;
-    animation-duration: 100s;
-}
-.bubbles li:nth-child(2){
-    width: 40px;
-    height: 40px;
-    left: 40%;
-    animation-delay: 2s;
-    animation-duration: 200s;
-}
-.bubbles li:nth-child(3){
-    width: 60px;
-    height: 60px;
-    left: 50%;
-    animation-delay: 4s;
-    animation-duration: 300s;
-} */
 
 @keyframes square {
   0% {

@@ -31,6 +31,14 @@ function buildSection(heading, description, i) {
   desc.textContent = description;
   parent.appendChild(desc);
 
+  window.addEventListener("scroll", (event) => {
+    let nav = document.getElementById(section.id * -1);
+    console.log(section);
+    isInViewport(section)
+      ? nav.classList.add("active")
+      : nav.classList.remove("active");
+  });
+
   section.appendChild(parent);
   document.getElementById("sections").appendChild(section);
 
@@ -106,3 +114,19 @@ sectionslist.push(
 toggleButton.addEventListener("click", () => {
   navbarLinks.classList.toggle("active");
 });
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function topFunction() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
