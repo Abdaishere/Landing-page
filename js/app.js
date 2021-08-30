@@ -1,5 +1,3 @@
-let brevid = 1;
-
 function getRandomInt(max) {
   return 20 + Math.floor(Math.random() * max);
 }
@@ -38,17 +36,14 @@ function buildSection(heading, description, i) {
     isInViewport(section)
       ? nav.classList.add("active")
       : nav.classList.remove("active");
-  });
-
+    });
+    
   section.appendChild(parent);
   document.getElementById("sections").appendChild(section);
 
   //Go to section
   a.addEventListener("click", function () {
-    document.getElementById(brevid).classList.remove("active");
-    this.classList.add("active");
     window.event.preventDefault();
-    brevid = this.id;
     document
       .getElementById(this.id * -1)
       .scrollIntoView({ behavior: "smooth" });
@@ -63,7 +58,6 @@ function buildSection(heading, description, i) {
   bubble.style.animationDelay = `${i}s`;
   bubble.style.animationDuration = `${i * 20}s`;
   bubble.style.color = "#F19674";
-
   document.querySelector(".bubbles").appendChild(bubble);
   return section;
 }
@@ -93,6 +87,13 @@ sectionslist.push(
 );
 sectionslist.push(
   buildSection(
+    "Section 3",
+    " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.",
+    sectionslist.length
+  )
+);
+sectionslist.push(
+  buildSection(
     "Section 4",
     " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.",
     sectionslist.length
@@ -101,13 +102,6 @@ sectionslist.push(
 sectionslist.push(
   buildSection(
     "Section 5",
-    " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.",
-    sectionslist.length
-  )
-);
-sectionslist.push(
-  buildSection(
-    "Section 6",
     " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.",
     sectionslist.length
   )

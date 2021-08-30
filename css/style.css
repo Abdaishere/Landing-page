@@ -155,8 +155,8 @@ nav .active {
     display: flex;
     position: absolute;
     right: 0px;
-    height: 92vh;
-    top: 8vh;
+    height: 200vh;
+    top: 10vh;
     background-color: #f19674;
     flex-direction: column;
     align-items: center;
@@ -236,6 +236,7 @@ section {
   transition: 2s ease-in-out;
   background-color: rgba(241, 150, 116, 0.85);
   color: aliceblue;
+  display: flex;
 }
 
 h1:after {
