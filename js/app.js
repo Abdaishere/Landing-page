@@ -32,7 +32,6 @@ function buildSection(heading, description, i) {
   // Active Section is in Viewport ?
   window.addEventListener("scroll", (event) => {
     let nav = document.getElementById(section.id * -1);
-    console.log(section);
     isInViewport(section)
       ? nav.classList.add("active")
       : nav.classList.remove("active");
